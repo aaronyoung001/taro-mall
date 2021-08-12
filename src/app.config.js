@@ -1,6 +1,8 @@
 export default {
   pages: [
+    'pages/home/home',
     'pages/index/index',
+
     'pages/ucenter/index/index',
     'pages/catalog/catalog',
     'pages/cart/cart',
@@ -42,7 +44,7 @@ export default {
     "selectedColor": "#AB956D",
     "color": "#666",
     "list": [{
-      "pagePath": "pages/index/index",
+      "pagePath": "pages/home/home",
       "iconPath": './static/images/home.png',
       "selectedIconPath": './static/images/home@selected.png',
       "text": "首页"

@@ -17,31 +17,35 @@ function request(url, data = {}, method = "GET") {
       },
       success: function(res) {
 
+        console.log(res)
         if (res.statusCode == 200) {
 
-          if (res.data.errno == 501) {
-            // 清除登录相关内容
-            try {
-              Taro.removeStorageSync('userInfo');
-              Taro.removeStorageSync('token');
-            } catch (e) {
-              // Do something when catch error
-            }
-            // 切换到登录页面
-            Taro.navigateTo({
-              url: '/pages/auth/login/login'
-            });
-          } else if(res.data.errno == 0) {
-            resolve(res.data.data);
-          } else {
-            // Taro.showModal({
-            //   title: '错误信息',
-            //   content: res.data.errmsg,
-            //   showCancel: false
-            // });
-            showErrorToast(res.data.errmsg);
-            reject(res.data.errmsg);
-          }
+          // if (res.data.errno == 501) {
+          //   // 清除登录相关内容
+          //   try {
+          //     Taro.removeStorageSync('userInfo');
+          //     Taro.removeStorageSync('token');
+          //   } catch (e) {
+          //     // Do something when catch error
+          //   }
+          //   // 切换到登录页面
+          //   Taro.navigateTo({
+          //     url: '/pages/auth/login/login'
+          //   });
+          // } else if(res.data.errno == 0) {
+          //   resolve(res.data.data);
+          // } else {
+          //   // Taro.showModal({
+          //   //   title: '错误信息',
+          //   //   content: res.data.errmsg,
+          //   //   showCancel: false
+          //   // });
+          //   showErrorToast(res.data.errmsg||"数据加载出错");
+          //   reject(res.data.errmsg||"数据加载出错");
+          // }
+
+          resolve(res.data);
+
         } else {
           reject(res.errMsg);
         }

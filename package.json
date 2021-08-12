@@ -38,6 +38,12 @@
   "dependencies": {
     "@babel/runtime": "^7.7.7",
     "@tarojs/components": "3.0.25",
+    "@tarojs/plugin-platform-alipay": "^3.3.0",
+    "@tarojs/plugin-platform-jd": "^3.3.0",
+    "@tarojs/plugin-platform-qq": "^3.3.0",
+    "@tarojs/plugin-platform-swan": "^3.3.0",
+    "@tarojs/plugin-platform-tt": "^3.3.0",
+    "@tarojs/plugin-platform-weapp": "^3.3.0",
     "@tarojs/react": "3.0.25",
     "@tarojs/runtime": "3.0.25",
     "@tarojs/taro": "3.0.25",
@@ -49,7 +55,8 @@
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "taro-ui": "3.0.0-alpha.9"
+    "taro-ui": "3.0.0-alpha.9",
+    "taro-virtual-list": "^1.0.8"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",
